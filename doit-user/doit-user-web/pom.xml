@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>doit-user</artifactId>
+        <groupId>com.qf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>doit-user-web</artifactId>
+    <packaging>war</packaging>
+
+    <name>doit-user-web Maven Webapp</name>
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.qf</groupId>
+            <artifactId>doit-user-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--JSP相关jar-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+    </dependencies>
+
+   <!-- <build>
+        <finalName>doit-user-web</finalName>
+        <plugins>
+            &lt;!&ndash;Tomcat的maven插件的坐标&ndash;&gt;
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                &lt;!&ndash;配置Tomcat插件&ndash;&gt;
+                <configuration>
+                    &lt;!&ndash;端口号&ndash;&gt;
+                    <port>8080</port>
+                    &lt;!&ndash;上下文&ndash;&gt;
+                    <path>/manager</path>
+                    &lt;!&ndash;解决GET请求中的中文乱码问题&ndash;&gt;
+                    <uriEncoding>UTF-8</uriEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!--远程Tomcat的ip地址和端口号，注意远程Tomcat需要启动-->
+                    <url>http://47.106.186.169:8081/manager/text</url>
+                    <username>admin</username>
+                    <password>admin123</password>
+                    <update>true</update>
+                    <path>/user/index</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

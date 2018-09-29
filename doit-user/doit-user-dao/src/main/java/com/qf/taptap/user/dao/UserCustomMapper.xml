@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.taptap.user.dao.UserCustomMapper" >
+
+  <sql id="Base_Column_List" >
+    i.id, i.username, i.password, i.birthday, i.sex, i.img, i.country, i.profile, i.tel, i.address, i.identity,i.isadmin
+  </sql>
+  <sql id="Base_Clause">
+    <where>
+      i.isadmin != 2
+      <if test="query!=null and query.username !=null and query.username !=''">
+        and i.username like '%${query.username}%'
+      </if>
+    </where>
+  </sql>
+  <select id="countUsers" resultType="long">
+    SELECT COUNT(1) FROM user i <include refid="Base_Clause" />
+  </select>
+
+  <select id="listUsersByPage" resultType="com.qf.taptap.user.pojo.po.User">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM user i <include refid="Base_Clause" />
+    LIMIT #{page.offset},#{page.limit}
+  </select>
+
+</mapper>

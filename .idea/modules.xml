@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/doit-common/doit-common.iml" filepath="$PROJECT_DIR$/doit-common/doit-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-parent/doit-parent.iml" filepath="$PROJECT_DIR$/doit-parent/doit-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-user/doit-user.iml" filepath="$PROJECT_DIR$/doit-user/doit-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-user/doit-user-dao/doit-user-dao.iml" filepath="$PROJECT_DIR$/doit-user/doit-user-dao/doit-user-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-user/doit-user-interface/doit-user-interface.iml" filepath="$PROJECT_DIR$/doit-user/doit-user-interface/doit-user-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-user/doit-user-pojo/doit-user-pojo.iml" filepath="$PROJECT_DIR$/doit-user/doit-user-pojo/doit-user-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-user/doit-user-service/doit-user-service.iml" filepath="$PROJECT_DIR$/doit-user/doit-user-service/doit-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-user/doit-user-web/doit-user-web.iml" filepath="$PROJECT_DIR$/doit-user/doit-user-web/doit-user-web.iml" />
+    </modules>
+  </component>
+</project>
